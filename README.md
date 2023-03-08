@@ -16,7 +16,7 @@ This repository builds a simple ChatGPT desktop application with Vue and Tauri.
 
 ### For users
 
-Go [Release](./releases) page and download pre-compiled packages for your platform.
+Go to the [Releases](https://github.com/onlyzdd/chatgpt-tauri/releases) page and download pre-compiled packages for your platform.
 
 ### For developers
 
