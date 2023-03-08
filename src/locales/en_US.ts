@@ -1,0 +1,18 @@
+export default {
+    about: 'About',
+    apikey_invalid_prompt: 'Please enter a valid API key.',
+    apikey_required_prompt: 'API key is required, and will be saved locally.',
+    built_with: 'Built with',
+    chat_error: 'An error occurred, please try again.',
+    chat_placeholder: 'Enter your question here, press Enter to get your answer.',
+    danger_zone: 'Danger zone',
+    en: 'en_US',
+    exit: 'Exit',
+    go: 'Go',
+    lang: 'Language',
+    redirect_home: 'Redirecting...',
+    settings: 'Settings',
+    theme: 'Theme',
+    try_again: 'Try again',
+    zh: 'zh_CN',
+}
