@@ -1,5 +1,5 @@
 <template>
-    <n-list-item>
+    <n-list-item class="msg-item">
         <template v-if="from === 'user'" #prefix>
             <n-avatar :size="32" :src="`https://gravatar.loli.net/avatar/${store.uid}?d=identicon`" />
         </template>
@@ -37,7 +37,7 @@ const html = computed(() => {
 </script>
 
 <style>
-.n-list .n-list-item .n-list-item__main {
+.n-list-item.msg-item .n-list-item__main {
     min-width: 0;
 }
 

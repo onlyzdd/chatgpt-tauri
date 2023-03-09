@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref } from 'vue'
+import { computed, reactive, ref, onUpdated, watch } from 'vue'
 import { NButton, NIcon, NInput, NList, NSpace } from 'naive-ui'
 import { PaperPlane } from '@vicons/ionicons5'
 import { openai } from '../api/openai'
@@ -73,10 +73,12 @@ const submit = async (retry: boolean = false) => {
                 }
             }
             done = readerDone
+            scrollBottom()
         }
     } catch (e) {
         last.text = t('chat_error')
         last.type = 'error'
+        scrollBottom()
     }
     isLoading.value = false
 }
@@ -103,15 +105,22 @@ const tryAgain = async () => {
     }
 }
 
+const scrollBottom = (ms: number = 100) => {
+    setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight)
+    }, ms)
+}
+
 </script>
 
 <style lang="scss">
-.suffix-icon {
+.n-input .n-input__suffix > .n-icon.suffix-icon {
     cursor: pointer;
+    color: rgba(194, 194, 194, 1);
 }
 
-.suffix-icon:hover {
-    color: var(--n-icon-color-hover);
+.n-input .n-input__suffix > .n-icon.suffix-icon:hover {
+    color: rgba(146, 146, 146, 1);
 }
 
 .theme-light {

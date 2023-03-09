@@ -41,7 +41,7 @@ import { useSettingsStore } from './store'
 
 import logoSVG from './assets/logo.svg'
 
-const { locale, t } = useI18n()
+const { locale } = useI18n()
 const store = useSettingsStore()
 locale.value = store.lang
 const theme = computed(() => {
